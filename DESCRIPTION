@@ -1,7 +1,7 @@
 Package: viralGenomeComparator
 Type: Package
 Title: Educational Viral Genome Comparison Tools
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Gaith", "Korchid", email = "189360939+Gaith2000korchid@users.noreply.github.com", role = c("aut", "cre"))
 Description: Reproducible utilities for learning viral comparative genomics in R,
     including nucleotide sequence quality control and a transparent
