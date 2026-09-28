@@ -1,0 +1,7 @@
+accession,virus_name,length,gc_percent,ambiguous_count,ambiguous_percent
+NC_001604.1,Escherichia phage T7,39937,48.398728,0,0
+NC_004777.1,Yersinia pestis phage phiA1122,37555,48.315803,0,0
+NC_003298.1,Enterobacteria phage T3,38208,49.900544,0,0
+NC_001271.1,Yersinia phage phiYeO3-12,39600,50.631313,0,0
+NC_010807.1,Salmonella phage phiSG-JL2,38815,50.864357,0,0
+NC_025451.1,Yersinia phage vB_YenP_AP5,38646,50.696062,0,0
