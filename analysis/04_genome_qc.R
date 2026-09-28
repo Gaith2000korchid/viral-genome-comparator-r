@@ -1,6 +1,6 @@
 # Build a reproducible QC table from downloaded complete-genome FASTA files.
 
-manifest <- read.csv("data/genome_manifest.csv", stringsAsFactors = FALSE)
+manifest <- read.csv("inst/extdata/genome_manifest.csv", stringsAsFactors = FALSE)
 
 qc_rows <- lapply(manifest$accession, function(accession) {
   path <- file.path("data/raw", paste0(accession, ".fasta"))
