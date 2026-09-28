@@ -1,0 +1,14 @@
+Package: viralGenomeComparator
+Type: Package
+Title: Educational Viral Genome Comparison Tools
+Version: 0.1.0
+Authors@R: person("Gaith", "Korchid", role = c("aut", "cre"))
+Description: Reproducible utilities for learning viral comparative genomics in R,
+    including nucleotide sequence quality control and a transparent
+    implementation of global pairwise alignment with Needleman-Wunsch.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
