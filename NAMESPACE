@@ -1,3 +1,4 @@
+export(pairwise_alignment_metrics)
 export(fasta_qc)
 export(needleman_wunsch)
 export(normalize_dna)
