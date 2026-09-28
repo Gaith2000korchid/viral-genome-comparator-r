@@ -1,7 +1,7 @@
 # Download the accession versions frozen in data/genome_manifest.csv.
 # Network access is deliberately kept outside package tests.
 
-manifest <- read.csv("data/genome_manifest.csv", stringsAsFactors = FALSE)
+manifest <- read.csv("inst/extdata/genome_manifest.csv", stringsAsFactors = FALSE)
 dir.create("data/raw", recursive = TRUE, showWarnings = FALSE)
 
 base_url <- "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
