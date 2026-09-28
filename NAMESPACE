@@ -1,0 +1,4 @@
+export(needleman_wunsch)
+export(normalize_dna)
+export(reverse_complement)
+export(sequence_qc)
