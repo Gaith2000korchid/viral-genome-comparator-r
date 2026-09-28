@@ -1,7 +1,0 @@
-accession,virus_name,current_genus,current_species,host_genus,panel_role,sequence_source,taxonomy_basis
-NC_001604.1,Escherichia phage T7,Teseptimavirus,Teseptimavirus T7,Escherichia,reference,NCBI RefSeq,ICTV 2025 / NCBI cross-reference
-NC_004777.1,Yersinia phage phiA1122,Teseptimavirus,Teseptimavirus YpPY,Yersinia,within-genus comparison,NCBI RefSeq,ICTV 2025 / NCBI cross-reference
-NC_003298.1,Enterobacteria phage T3,Teetrevirus,Teetrevirus T3Luria,Escherichia,comparison group,NCBI RefSeq,ICTV 2025 / NCBI cross-reference
-NC_001271.1,Yersinia phage phiYeO3-12,Teetrevirus,Teetrevirus YeO312,Yersinia,comparison group,NCBI RefSeq,ICTV 2025 / NCBI cross-reference
-NC_010807.1,Salmonella phage phiSG-JL2,Teetrevirus,Teetrevirus SGJL2,Salmonella,comparison group,NCBI RefSeq,ICTV 2025 / NCBI cross-reference
-NC_025451.1,Yersinia phage vB_YenP_AP5,Teetrevirus,Teetrevirus AP5,Yersinia,comparison group,NCBI RefSeq,ICTV 2025 / NCBI cross-reference
