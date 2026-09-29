@@ -37,6 +37,11 @@ jobs:
           r-version: release
           use-public-rspm: true
 
+      - name: Install MAFFT
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mafft
+
       - name: Install analysis dependencies
         shell: Rscript {0}
         run: |
@@ -67,7 +72,10 @@ jobs:
           name: viral-genome-comparator-v0.3-results
           path: |
             results/v0.3_genome_qc.csv
+            results/v0.3_unaligned_panel.fasta
             results/v0.3_alignment.fasta
+            results/v0.3_mafft.log
+            results/v0.3_software_versions.txt
             results/v0.3_pairwise_alignment_metrics.csv
             results/v0.3_p_distance_matrix.csv
             results/v0.3_taxonomy_concordance.csv
