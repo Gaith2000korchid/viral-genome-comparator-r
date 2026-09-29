@@ -11,6 +11,7 @@ on:
       - "analysis/11_v03_taxonomy_concordance.R"
       - "analysis/12_v03_conservation.R"
       - "analysis/13_v03_neighbor_joining.R"
+      - "analysis/14_v03_cluster_diagnostics.R"
       - "R/conservation.R"
       - "R/taxonomy_metrics.R"
       - "R/fasta_qc.R"
@@ -65,6 +66,7 @@ jobs:
           source("analysis/11_v03_taxonomy_concordance.R")
           source("analysis/12_v03_conservation.R")
           source("analysis/13_v03_neighbor_joining.R")
+          source("analysis/14_v03_cluster_diagnostics.R")
 
       - name: Upload v0.3 results
         uses: actions/upload-artifact@v4
@@ -87,4 +89,7 @@ jobs:
             results/v0.3_entropy_windows.png
             results/v0.3_neighbor_joining_tree.nwk
             results/v0.3_neighbor_joining_tree.png
+            results/v0.3_cluster_assignments_k2.csv
+            results/v0.3_genus_distance_summary.csv
+            results/v0.3_cluster_sizes_k2.csv
           if-no-files-found: error
