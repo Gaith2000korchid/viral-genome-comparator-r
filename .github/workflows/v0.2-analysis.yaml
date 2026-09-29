@@ -1,0 +1,68 @@
+name: v0.2 comparative genomics
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "analysis/**"
+      - "R/**"
+      - "inst/extdata/**"
+      - "DESCRIPTION"
+      - "NAMESPACE"
+      - ".github/workflows/v0.2-analysis.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  run-v0-2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: true
+
+      - name: Install Bioconductor dependencies
+        shell: Rscript {0}
+        run: |
+          install.packages("BiocManager")
+          BiocManager::install(
+            c("Biostrings", "DECIPHER"),
+            ask = FALSE,
+            update = FALSE
+          )
+
+      - name: Install local package
+        run: R CMD INSTALL .
+
+      - name: Run v0.2 analysis
+        shell: Rscript {0}
+        run: |
+          library(viralGenomeComparator)
+          source("analysis/03_download_genomes.R")
+          source("analysis/04_genome_qc.R")
+          source("analysis/05_align_genomes.R")
+          source("analysis/06_pairwise_metrics.R")
+          source("analysis/07_cluster_heatmap.R")
+
+      - name: Upload v0.2 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: viral-genome-comparator-v0.2-results
+          path: |
+            results/genome_qc.csv
+            results/pilot_alignment.fasta
+            results/pairwise_alignment_metrics.csv
+            results/p_distance_matrix.csv
+            results/cluster_order.csv
+            results/p_distance_heatmap.png
+            results/p_distance_dendrogram.png
+          if-no-files-found: error
