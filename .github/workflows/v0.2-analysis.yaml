@@ -5,11 +5,14 @@ on:
   push:
     branches: [main]
     paths:
-      - "analysis/**"
-      - "R/**"
-      - "inst/extdata/**"
-      - "DESCRIPTION"
-      - "NAMESPACE"
+      - "analysis/03_download_genomes.R"
+      - "analysis/04_genome_qc.R"
+      - "analysis/05_align_genomes.R"
+      - "analysis/06_pairwise_metrics.R"
+      - "analysis/07_cluster_heatmap.R"
+      - "R/fasta_qc.R"
+      - "R/alignment_metrics.R"
+      - "inst/extdata/genome_manifest.csv"
       - ".github/workflows/v0.2-analysis.yaml"
 
 permissions:
