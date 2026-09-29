@@ -21,7 +21,7 @@ p_distance <- DECIPHER::DistanceMatrix(
   method = "overlap",
   includeTerminalGaps = FALSE,
   penalizeGapLetterMatches = TRUE,
-  correction = "none",
+  correction = NA,
   processors = 1,
   verbose = FALSE
 )
