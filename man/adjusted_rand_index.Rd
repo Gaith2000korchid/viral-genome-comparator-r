@@ -5,10 +5,10 @@
 adjusted_rand_index(truth, predicted)
 }
 \arguments{
-  \item{truth}{Reference group labels.}
-  \item{predicted}{Cluster labels to compare with the reference grouping.}
+  \item{truth}{Vector of reference categorical labels.}
+  \item{predicted}{Vector of predicted or sequence-derived cluster labels.}
 }
-\value{A numeric Adjusted Rand Index. A value of 1 indicates identical partitions.}
+\value{A numeric Adjusted Rand Index. Identical non-degenerate partitions return 1.}
 \description{
-Compares two partitions while correcting the Rand Index for agreement expected by chance. Cluster label names themselves do not need to match.
+Compares two partitions while adjusting the Rand Index for agreement expected by chance. The v0.3 workflow uses this function to compare whole-genome distance clustering with curated genus labels.
 }
