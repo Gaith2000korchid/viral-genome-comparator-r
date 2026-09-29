@@ -50,3 +50,4 @@ rsconnect/
 
 # Downloaded biological source data
 /data/raw/
+/data/raw_v03/
