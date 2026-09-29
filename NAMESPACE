@@ -1,3 +1,5 @@
+export(adjusted_rand_index)
+export(alignment_site_summary)
 export(pairwise_alignment_metrics)
 export(fasta_qc)
 export(needleman_wunsch)
