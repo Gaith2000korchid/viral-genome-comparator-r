@@ -1,0 +1,2 @@
+"n_genomes","n_teseptimavirus","n_teetrevirus","mean_within_genus_distance","mean_between_genus_distance","between_minus_within","nearest_neighbor_genus_accuracy","adjusted_rand_index_k2","permutation_p_value","permutations"
+29,12,17,0.29948598680094,0.48098332361863,0.18149733681769,1,-0.0313543329946292,0.001,999

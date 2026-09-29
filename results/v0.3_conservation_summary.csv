@@ -1,0 +1,4 @@
+"panel","n_sequences","aligned_width","high_occupancy_sites","conserved_sites","variable_sites","low_occupancy_sites","mean_entropy_high_occupancy"
+"all",29,83730,33400,11518,21882,50330,0.588386117580387
+"Teetrevirus",17,83730,31593,11437,20156,52137,0.491024403815127
+"Teseptimavirus",12,83730,33919,23476,10443,49811,0.229852510646311
