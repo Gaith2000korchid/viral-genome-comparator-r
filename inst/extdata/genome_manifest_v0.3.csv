@@ -1,0 +1,30 @@
+ncbi_uid,accession,virus_name,current_genus,expected_length_bp,panel_role,sequence_source,selection_basis,snapshot_date
+1842033220,NC_048163.1,"Phage NC-A",Teseptimavirus,39536,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842027049,NC_048082.1,"Enterobacteria phage vB_EcoP_IME390",Teseptimavirus,38396,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842026789,NC_048079.1,"Escherichia phage C5",Teseptimavirus,39551,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842026744,NC_048078.1,"Escherichia phage N30",Teseptimavirus,39266,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842017691,NC_048004.1,"Salmonella phage 3A_8767",Teseptimavirus,38821,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842010855,NC_047923.1,"Escherichia phage HZ2R8",Teseptimavirus,39482,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842008613,NC_047895.1,"Escherichia phage EG1",Teseptimavirus,39919,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1070105919,NC_031114.1,"Escherichia phage 64795_ec1",Teseptimavirus,39235,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+849122203,NC_027387.1,"Escherichia phage CICC 80001",Teseptimavirus,38810,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+194100359,NC_011045.1,"Enterobacteria phage 13a",Teseptimavirus,38841,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+30387453,NC_004777.1,"Yersinia pestis phage phiA1122",Teseptimavirus,37555,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+9627425,NC_001604.1,"Enterobacteria phage T7",Teseptimavirus,39937,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teseptimavirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+2438105650,NC_071009.1,"Salmonella phage vB_SAg-RPN15",Teetrevirus,38505,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842025266,NC_048063.1,"Escherichia phage LL2",Teetrevirus,39382,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842004432,NC_047844.1,"Serratia phage 2050H2",Teetrevirus,39216,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842004374,NC_047843.1,"Leclercia phage 10164-302",Teetrevirus,39064,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1841998962,NC_047774.1,"Serratia phage SM9-3Y",Teetrevirus,39631,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1841998167,NC_047766.1,"Escherichia phage ECA2",Teetrevirus,38890,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1070104274,NC_031092.1,"Citrobacter phage SH2",Teetrevirus,39158,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1070102193,NC_031066.1,"Citrobacter phage SH1",Teetrevirus,39434,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1842005857,NC_047867.1,"Enterobacteria phage T7M",Teetrevirus,38202,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+1841997512,NC_047755.1,"Yersinia phage phiYe-F10",Teetrevirus,39210,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+985760666,NC_029102.1,"Enterobacter phage E-2",Teetrevirus,36051,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+971821202,NC_028880.1,"Citrobacter phage phiCFP-1",Teetrevirus,38625,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+971743977,NC_028795.1,"Enterobacter phage E-3",Teetrevirus,31522,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+712915315,NC_025451.1,"Yersinia phage vB_YenP_AP5",Teetrevirus,38646,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+189427193,NC_010807.1,"Salmonella phage phiSG-JL2",Teetrevirus,38815,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+9633990,NC_001271.1,"Yersinia phage phiYeO3-12",Teetrevirus,39600,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
+17570786,NC_003298.1,"Enterobacteria phage T3",Teetrevirus,38208,v0.3 census,NCBI RefSeq,"NCBI ESearch: Teetrevirus[Organism] AND complete genome[Title] AND srcdb_refseq[PROP]",2026-09-29
