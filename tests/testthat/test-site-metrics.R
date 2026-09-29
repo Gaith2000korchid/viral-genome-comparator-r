@@ -1,4 +1,4 @@
-test_that("alignment site metrics distinguish conservation, variation and gaps", {
+test_that("alignment_site_summary distinguishes conservation, variation and gaps", {
   skip_if_not_installed("Biostrings")
 
   aligned <- Biostrings::DNAStringSet(c(
@@ -7,18 +7,22 @@ test_that("alignment site metrics distinguish conservation, variation and gaps",
     c = "ATGT"
   ))
 
-  metrics <- alignment_site_metrics(aligned)
+  metrics <- alignment_site_summary(
+    aligned,
+    min_occupancy = 0.8,
+    conserved_threshold = 0.95
+  )
 
   expect_equal(nrow(metrics), 4)
-  expect_equal(metrics$coverage_fraction[1], 1)
-  expect_equal(metrics$consensus_frequency[1], 1)
-  expect_false(metrics$variable_site[1])
+  expect_equal(metrics$occupancy_percent[1], 100)
+  expect_equal(metrics$major_frequency_percent[1], 100)
+  expect_equal(metrics$site_class[1], "conserved")
 
-  expect_equal(metrics$allele_count[2], 2)
-  expect_true(metrics$variable_site[2])
+  expect_equal(metrics$distinct_canonical_bases[2], 2)
+  expect_equal(metrics$site_class[2], "variable")
 
-  expect_equal(metrics$coverage_fraction[3], 2 / 3)
-  expect_equal(metrics$gap_or_ambiguous_count[3], 1)
+  expect_equal(metrics$occupancy_percent[3], 100 * 2 / 3)
+  expect_equal(metrics$site_class[3], "low_occupancy")
 })
 
 test_that("adjusted Rand index recognizes identical partitions", {
