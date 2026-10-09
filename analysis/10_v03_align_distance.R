@@ -71,12 +71,16 @@ write.csv(
   row.names = FALSE
 )
 
+# DECIPHER 3.2.0, pinned in environment-linux-64.explicit.txt, accepts
+# correction = "none" for the uncorrected overlap distance. correction = NA
+# is rejected as an invalid correction method in this release. Later manuals
+# document NA as the uncorrected default; do not change this without retesting
+# the frozen environment.
 p_distance <- DECIPHER::DistanceMatrix(
   aligned,
-  method = "overlap",
   includeTerminalGaps = FALSE,
   penalizeGapLetterMatches = TRUE,
-  correction = NA,
+  correction = "none",
   processors = 2,
   verbose = FALSE
 )

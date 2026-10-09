@@ -16,12 +16,12 @@ if (!file.exists(alignment_path)) {
 aligned <- Biostrings::readDNAStringSet(alignment_path)
 metrics <- pairwise_alignment_metrics(aligned)
 
+# Same DECIPHER 3.2.0 contract as analysis/10_v03_align_distance.R.
 p_distance <- DECIPHER::DistanceMatrix(
   aligned,
-  method = "overlap",
   includeTerminalGaps = FALSE,
   penalizeGapLetterMatches = TRUE,
-  correction = NA,
+  correction = "none",
   processors = 1,
   verbose = FALSE
 )

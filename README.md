@@ -159,8 +159,13 @@ Validated pilot panel, complete-genome alignment, identity/coverage metrics, p-d
 
 The Neighbor-Joining tree is an exploratory distance tree, **not** a maximum-likelihood phylogeny. The two-genus panel is a focused case study, not a general benchmark of viral taxonomy. Alignment-derived distance is not equivalent to ANI or to VIRIDIC intergenomic similarity.
 
+Identity over comparable bases and the DECIPHER distance also answer different questions. The package metrics state their denominator. The frozen DECIPHER 3.2.0 pin rejects `correction = NA` with `Invalid distance correction method`; the analysis scripts request `correction = "none"`, the uncorrected overlap distance on this release. Gap-to-letter matches are counted as mismatches. A forced split into two clusters is a diagnostic, not an external classification score.
+
 See [docs/methodological_notes.md](docs/methodological_notes.md) for the full interpretation boundary.
 
 ## License
 
 MIT.
+
+
+
