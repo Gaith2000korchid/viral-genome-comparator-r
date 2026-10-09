@@ -1,3 +1,8 @@
+# Requires the frozen DECIPHER 3.2.0 environment. The current Bioconductor
+# release rejects the correction contract used internally by AlignSeqs during
+# realignment (Invalid distance correction method). Do not run this script
+# against an unpinned DECIPHER upgrade without retesting.
+
 # Multiple alignment of the six-genome pilot panel.
 # DECIPHER is used as the production aligner; the educational Needleman-Wunsch
 # implementation in R/needleman_wunsch.R is intentionally not used here.

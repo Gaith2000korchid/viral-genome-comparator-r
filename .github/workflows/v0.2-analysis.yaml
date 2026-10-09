@@ -14,6 +14,8 @@ on:
       - "R/alignment_metrics.R"
       - "inst/extdata/genome_manifest.csv"
       - ".github/workflows/v0.2-analysis.yaml"
+      - "environment.yml"
+      - "environment-linux-64.explicit.txt"
 
 permissions:
   contents: read
@@ -27,27 +29,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Set up R
-        uses: r-lib/actions/setup-r@v2
+      - name: Restore the frozen Linux analysis environment
+        uses: mamba-org/setup-micromamba@v2
         with:
-          r-version: release
-          use-public-rspm: true
-
-      - name: Install Bioconductor dependencies
-        shell: Rscript {0}
-        run: |
-          install.packages("BiocManager")
-          BiocManager::install(
-            c("Biostrings", "DECIPHER"),
-            ask = FALSE,
-            update = FALSE
-          )
+          environment-file: environment-linux-64.explicit.txt
+          environment-name: viral-genome-comparator
+          cache-environment: true
+          init-shell: bash
 
       - name: Install local package
+        shell: bash -el {0}
         run: R CMD INSTALL .
 
       - name: Run v0.2 analysis
-        shell: Rscript {0}
+        shell: bash -el {0}
         run: |
           library(viralGenomeComparator)
           source("analysis/03_download_genomes.R")
@@ -69,3 +64,4 @@ jobs:
             results/p_distance_heatmap.png
             results/p_distance_dendrogram.png
           if-no-files-found: error
+          retention-days: 14
