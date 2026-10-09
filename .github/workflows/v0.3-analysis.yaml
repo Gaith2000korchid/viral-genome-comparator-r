@@ -19,6 +19,10 @@ on:
       - "inst/extdata/genome_manifest_v0.3.csv"
       - "inst/extdata/v0.3_panel_provenance.md"
       - ".github/workflows/v0.3-analysis.yaml"
+      - "analysis/run_v03.R"
+      - "analysis/15_v03_summary_figure.R"
+      - "environment.yml"
+      - "environment-linux-64.explicit.txt"
 
 permissions:
   contents: read
@@ -32,41 +36,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Set up R
-        uses: r-lib/actions/setup-r@v2
+      - name: Restore the frozen Linux analysis environment
+        uses: mamba-org/setup-micromamba@v2
         with:
-          r-version: release
-          use-public-rspm: true
-
-      - name: Install MAFFT
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y mafft
-
-      - name: Install analysis dependencies
-        shell: Rscript {0}
-        run: |
-          install.packages(c("BiocManager", "ape"))
-          BiocManager::install(
-            c("Biostrings", "DECIPHER"),
-            ask = FALSE,
-            update = FALSE
-          )
+          environment-file: environment-linux-64.explicit.txt
+          environment-name: viral-genome-comparator
+          cache-environment: true
+          init-shell: bash
 
       - name: Install local package
+        shell: bash -el {0}
         run: R CMD INSTALL .
 
       - name: Run v0.3 analysis
-        shell: Rscript {0}
-        run: |
-          library(viralGenomeComparator)
-          source("analysis/08_download_v03_panel.R")
-          source("analysis/09_v03_genome_qc.R")
-          source("analysis/10_v03_align_distance.R")
-          source("analysis/11_v03_taxonomy_concordance.R")
-          source("analysis/12_v03_conservation.R")
-          source("analysis/13_v03_neighbor_joining.R")
-          source("analysis/14_v03_cluster_diagnostics.R")
+        shell: bash -el {0}
+        run: Rscript analysis/run_v03.R
 
       - name: Upload v0.3 results
         uses: actions/upload-artifact@v4
@@ -78,6 +62,8 @@ jobs:
             results/v0.3_alignment.fasta
             results/v0.3_mafft.log
             results/v0.3_software_versions.txt
+            results/v0.3_session_info.txt
+            results/v0.3_taxonomy_summary.svg
             results/v0.3_pairwise_alignment_metrics.csv
             results/v0.3_p_distance_matrix.csv
             results/v0.3_taxonomy_concordance.csv

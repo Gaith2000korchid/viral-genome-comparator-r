@@ -5,6 +5,8 @@
 
 Reproducible comparative viral genomics in R: genome QC, whole-genome alignment, pairwise identity/coverage, distance analysis, conservation, clustering and exploratory phylogenetic interpretation of bacteriophage genomes.
 
+[Présentation française](docs/PRESENTATION_FR.md) · [Frozen environment](docs/reproduction.md)
+
 ## Scientific question
 
 **Can whole-genome sequence similarity recover biologically meaningful structure among related bacteriophages, and where does simple clustering fail?**
@@ -62,6 +64,10 @@ The low ARI is not treated as an error to hide. A forced `k = 2` hierarchical cu
 
 This means that **local genomic neighborhood agrees very strongly with genus labels, while the global geometry of the distance matrix contains additional substructure**. In other words, taxonomy-related signal does not imply that a naive two-cluster cut will reproduce the taxonomy exactly.
 
+![Genus-distance summary](results/v0.3_taxonomy_summary.svg)
+
+This plot summarizes the recorded panel; it is not an external classification benchmark.
+
 ## Conservation result
 
 The two genera also differ in sequence conservation across the alignment.
@@ -107,9 +113,18 @@ The easiest route is the GitHub Actions workflow:
 
 `v0.3 biological interpretation`
 
-For local execution, install R, MAFFT, `ape`, `Biostrings` and `DECIPHER`, install this package, then run:
+For a frozen Linux execution (including Ubuntu under WSL2), install micromamba and run from the repository root:
+
+```bash
+micromamba create -y -n viral-genome-comparator -f environment-linux-64.explicit.txt
+micromamba run -n viral-genome-comparator R CMD INSTALL .
+micromamba run -n viral-genome-comparator Rscript analysis/run_v03.R
+```
+
+`environment.yml` specifies the direct versions; the explicit Linux lock fixes resolved package builds and URLs. It is not a macOS/Windows-native lock. To run the individual scripts in an R session inside that environment, load the installed package first:
 
 ```r
+library(viralGenomeComparator)
 source("analysis/08_download_v03_panel.R")
 source("analysis/09_v03_genome_qc.R")
 source("analysis/10_v03_align_distance.R")

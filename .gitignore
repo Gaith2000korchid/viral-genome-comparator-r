@@ -39,8 +39,12 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+# Generated pkgdown site; authored methodological documentation remains tracked.
+docs/reference/
+docs/articles/
+docs/libs/
+docs/site_libs/
+docs/index.html
 
 # translation temp files
 po/*~
@@ -51,3 +55,8 @@ rsconnect/
 # Downloaded biological source data
 /data/raw/
 /data/raw_v03/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
