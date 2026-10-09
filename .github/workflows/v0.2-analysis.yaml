@@ -14,6 +14,7 @@ on:
       - "R/alignment_metrics.R"
       - "inst/extdata/genome_manifest.csv"
       - ".github/workflows/v0.2-analysis.yaml"
+      - "analysis/run_v02.R"
       - "environment.yml"
       - "environment-linux-64.explicit.txt"
 
@@ -43,13 +44,7 @@ jobs:
 
       - name: Run v0.2 analysis
         shell: bash -el {0}
-        run: |
-          library(viralGenomeComparator)
-          source("analysis/03_download_genomes.R")
-          source("analysis/04_genome_qc.R")
-          source("analysis/05_align_genomes.R")
-          source("analysis/06_pairwise_metrics.R")
-          source("analysis/07_cluster_heatmap.R")
+        run: Rscript analysis/run_v02.R
 
       - name: Upload v0.2 results
         uses: actions/upload-artifact@v4
