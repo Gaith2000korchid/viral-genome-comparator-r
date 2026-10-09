@@ -7,6 +7,23 @@ Reproducible comparative viral genomics in R: genome QC, whole-genome alignment,
 
 [Présentation française](docs/PRESENTATION_FR.md) · [Frozen environment](docs/reproduction.md)
 
+## Start here
+
+**Contribution:** a tested R package and end-to-end comparative-genomics analysis combining frozen accessions, MAFFT alignment, quantitative taxonomy checks and exploratory trees.
+
+**Recorded result:** all 29 genomes have a nearest neighbor of the same genus, but a forced two-cluster cut has ARI −0.031. Local taxonomic agreement does not establish external classification performance.
+
+![Recorded panel: genus-distance summary](results/v0.3_taxonomy_summary.svg)
+
+**Analysis entry point** (after creating the [frozen Linux environment](#reproduce-v03), from the repository root; downloads the public panel):
+
+```bash
+micromamba run -n viral-genome-comparator R CMD INSTALL .
+micromamba run -n viral-genome-comparator Rscript analysis/run_v03.R
+```
+
+[Reproduction](docs/reproduction.md) · [Methodological notes](docs/methodological_notes.md) · [Recorded outputs](results/)
+
 ## Scientific question
 
 **Can whole-genome sequence similarity recover biologically meaningful structure among related bacteriophages, and where does simple clustering fail?**
@@ -63,10 +80,6 @@ The low ARI is not treated as an error to hide. A forced `k = 2` hierarchical cu
   - `NC_028795.1` — Enterobacter phage E-3
 
 This means that **local genomic neighborhood agrees very strongly with genus labels, while the global geometry of the distance matrix contains additional substructure**. In other words, taxonomy-related signal does not imply that a naive two-cluster cut will reproduce the taxonomy exactly.
-
-![Genus-distance summary](results/v0.3_taxonomy_summary.svg)
-
-This plot summarizes the recorded panel; it is not an external classification benchmark.
 
 ## Conservation result
 
